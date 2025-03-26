@@ -51,6 +51,48 @@
      - Steps to install and run the project.
      - Explanation of key real-time concepts used.
 
+## Deployment Instructions
+
+### Backend (Render)
+1. Go to [Render](https://render.com)
+2. Sign up for an account
+3. Click "New +"
+4. Select "Web Service"
+5. Connect your GitHub repository
+6. Set the following build command:
+   ```bash
+   npm install
+   ```
+7. Set the start command:
+   ```bash
+   npm start
+   ```
+8. Set the environment variable:
+   ```
+   PORT=5000
+   ```
+9. Click "Create Web Service"
+
+### Frontend (Vercel)
+1. Go to [Vercel](https://vercel.com)
+2. Sign up for an account
+3. Click "Import Project"
+4. Connect your GitHub repository
+5. Click "Deploy"
+
+### Environment Variables
+Create a `.env` file in the client directory with the following content:
+```
+REACT_APP_BACKEND_URL=https://your-backend-url.onrender.com
+```
+
+Replace `your-backend-url.onrender.com` with your actual Render backend URL.
+
+### Post-Deployment
+1. After both services are deployed, update the `.env` file in your repository with the actual backend URL
+2. Commit and push the changes
+3. Vercel will automatically rebuild and redeploy the frontend with the new environment variable
+
 9. **Submission:**
    - Push your project to your GitHub repository.
 
@@ -61,4 +103,3 @@
 - Clean UI and responsive design.
 - Structured and well-documented code.
 - Successful deployment and working application link.
-
